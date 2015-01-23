@@ -1,5 +1,6 @@
 var gulp = require('gulp');
-var browserify = require('gulp-browserify');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
 var connect = require('gulp-connect');
 var open = require('gulp-open');
 var sass = require('gulp-sass');
@@ -12,9 +13,11 @@ gulp.task('sass', function() {
 });
 
 gulp.task('browserify', function() {
-    gulp.src('./app/src/js/app.js')
-        .pipe(browserify({ transform: 'reactify' }))
-        .pipe(gulp.dest('./app/dist'));
+    browserify('./app/src/js/app.js')
+    .transform('reactify', { 'es6': true })
+    .bundle()
+    .pipe(source('app.js'))
+    .pipe(gulp.dest('./app/dist'));
 });
 
 gulp.task('connect', function() {

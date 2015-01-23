@@ -1,6 +1,6 @@
 var React = require('react');
 var Router = require('react-router');
-var Link = require('react-router').Link;
+var { Link } = Router;
 
 var Hello = React.createClass({
     mixins: [ Router.State ],

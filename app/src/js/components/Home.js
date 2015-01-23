@@ -1,5 +1,6 @@
 var React = require('react');
-var Link = require('react-router').Link;
+var Router = require('react-router');
+var { Link } = Router;
 
 var Home = React.createClass({
     render: function() {

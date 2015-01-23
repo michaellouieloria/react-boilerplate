@@ -52,5 +52,5 @@ gulp.task('watch', function() {
     gulp.watch('app/src/**/*.js', ['browserify']);
 });
 
-gulp.task('default', ['browserify']);
+gulp.task('default', ['browserify', 'sass']);
 gulp.task('serve', ['browserify', 'sass', 'connect', 'open', 'watch']);

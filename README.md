@@ -1,6 +1,6 @@
 ## React.js Boilerplate
 
-It is a basic React.js project boilerplate, it uses JSX, the Backbone Router, Browserify and SASS.
+It is a basic React.js project boilerplate, it uses JSX, React Router, Browserify and SASS.
 
 ### How to run
 

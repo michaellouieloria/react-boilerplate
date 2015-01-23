@@ -1,10 +1,17 @@
 var React = require('react');
+var Router = require('react-router');
+var Link = require('react-router').Link;
 
 var Hello = React.createClass({
+    mixins: [ Router.State ],
     render: function() {
+        var name = this.getParams().name;
         return (
             <div className="hello">
-                <h2>Hello {this.props.name}</h2>
+                <h2>Hello {name}</h2>
+                <ul>
+                    <li><Link to="home">Go Home</Link></li>
+                </ul>
             </div>
         );
     }

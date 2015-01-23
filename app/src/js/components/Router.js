@@ -4,11 +4,13 @@ var Backbone = require('backbone');
 Backbone.$ = $;
 
 var Home = require('./Home');
+var Hello = require('./Hello');
 
 var AppRouter = React.createClass({
     componentWillMount: function() {
         var Router = Backbone.Router.extend({
             routes: {
+                'hello/:name': this.routeHello,
                 '': this.routeHome
             }
         });
@@ -25,6 +27,9 @@ var AppRouter = React.createClass({
                 {this.state.page}
             </div>
         );
+    },
+    routeHello: function(name) {
+        this.setState({ page: <Hello name={name} /> });
     },
     routeHome: function() {
         this.setState({ page: <Home /> });

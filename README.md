@@ -2,8 +2,10 @@
 
 It is a basic React.js project boilerplate, it uses JSX, React Router, Browserify and SASS.
 
-### How to run
+### Usage
 
+- `git clone https://github.com/AbeEstrada/react-boilerplate.git`
+- `cd react-boilerplate`
 - `npm install`
 - `npm start`
 

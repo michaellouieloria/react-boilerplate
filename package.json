@@ -23,6 +23,11 @@
     "gulp-react": "^2.0.0",
     "gulp-sass": "^1.3.2",
     "reactify": "^1.0.0",
-    "vinyl-source-stream": "^1.0.0"
+    "vinyl-source-stream": "^1.0.0",
+    "gulp-uglifyjs": "*",
+    "gulp-sourcemaps": "*",
+    "vinyl-buffer": "*",
+    "gulp-cssmin": "*",
+    "gulp-newer": "*"
   }
 }

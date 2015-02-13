@@ -44,9 +44,6 @@ gulp.task('browserify', function() {
     .transform('reactify', { 'es6': true })
     .bundle()
     .pipe(source('app.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
     .pipe(gulp.dest('./app/dist/js'));
 });
 
